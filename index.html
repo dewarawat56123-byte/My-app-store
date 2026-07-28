@@ -4,196 +4,192 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>My App Store</title>
+<title>ViralLeaks</title>
 
 <style>
 *{
   box-sizing:border-box;
   margin:0;
   padding:0;
-  font-family:Arial,sans-serif;
 }
 
 body{
-  background:#f8f9fa;
-  color:#202124;
+  background:#0f0f0f;
+  color:white;
+  font-family:Arial,sans-serif;
 }
 
-header{
-  background:white;
-  padding:15px 20px;
+.topbar{
+  height:65px;
   display:flex;
   align-items:center;
-  gap:20px;
-  border-bottom:1px solid #ddd;
-  position:sticky;
-  top:0;
-  z-index:10;
+  justify-content:space-between;
+  padding:0 20px;
 }
 
-.logo{
-  font-size:24px;
-  font-weight:bold;
-  color:#0f9d58;
-  white-space:nowrap;
-}
-
-.search{
-  flex:1;
-  max-width:600px;
-  background:#f1f3f4;
-  border-radius:30px;
-  padding:13px 20px;
-  border:none;
-  outline:none;
-  font-size:16px;
+.topbar button{
+  background:none;
+  border:0;
+  color:white;
+  font-size:28px;
 }
 
 .container{
-  max-width:1200px;
+  max-width:900px;
   margin:auto;
-  padding:25px 20px;
-}
-
-.banner{
-  background:linear-gradient(135deg,#0f9d58,#34a853);
-  color:white;
-  border-radius:20px;
-  padding:35px;
-  margin-bottom:30px;
-}
-
-.banner h1{
-  font-size:32px;
-  margin-bottom:10px;
-}
-
-.banner p{
-  font-size:16px;
-}
-
-.categories{
-  display:flex;
-  gap:10px;
-  overflow-x:auto;
-  margin-bottom:30px;
-}
-
-.category{
-  background:white;
-  border:1px solid #ddd;
-  padding:10px 18px;
-  border-radius:25px;
-  white-space:nowrap;
-  cursor:pointer;
-}
-
-.category:hover{
-  background:#e8f5e9;
-}
-
-h2{
-  margin:25px 0 15px;
-}
-
-.apps{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-  gap:20px;
-}
-
-.app{
-  background:white;
   padding:20px;
-  border-radius:18px;
-  box-shadow:0 2px 10px rgba(0,0,0,.08);
-  transition:.2s;
 }
 
-.app:hover{
-  transform:translateY(-4px);
-  box-shadow:0 5px 18px rgba(0,0,0,.15);
+.app-header{
+  display:flex;
+  align-items:center;
+  gap:22px;
+  margin-top:20px;
 }
 
-.icon{
-  width:70px;
-  height:70px;
-  border-radius:18px;
-  background:#e8f5e9;
+.app-icon{
+  width:105px;
+  height:105px;
+  border-radius:24px;
+  background:linear-gradient(135deg,#7b2cff,#d000ff);
   display:flex;
   align-items:center;
   justify-content:center;
-  font-size:35px;
-  margin-bottom:15px;
+  font-size:50px;
 }
 
-.app h3{
-  margin-bottom:7px;
+.app-info h1{
+  font-size:28px;
+  margin-bottom:10px;
 }
 
-.app p{
-  color:#777;
-  font-size:14px;
+.developer{
+  color:#8ab4f8;
+  font-size:18px;
   margin-bottom:8px;
 }
 
-.rating{
-  margin-bottom:15px;
+.subtitle{
+  color:#aaa;
 }
 
-.download{
-  width:100%;
-  border:none;
-  background:#0f9d58;
-  color:white;
-  padding:12px;
-  border-radius:25px;
-  font-size:15px;
-  cursor:pointer;
-}
-
-.download:hover{
-  background:#0b8043;
-}
-
-footer{
+.stats{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  margin:45px 0 25px;
   text-align:center;
-  padding:30px;
-  margin-top:40px;
+}
+
+.stat{
+  border-right:1px solid #444;
+  padding:5px;
+}
+
+.stat:last-child{
+  border:none;
+}
+
+.stat strong{
+  display:block;
+  font-size:20px;
+  margin-bottom:8px;
+}
+
+.stat span{
+  color:#aaa;
+  font-size:14px;
+}
+
+.download-btn{
+  display:block;
+  width:100%;
+  background:#a8c7fa;
+  color:#111;
+  text-align:center;
+  text-decoration:none;
+  padding:17px;
+  border-radius:35px;
+  font-size:19px;
+  font-weight:bold;
+  margin:20px 0 35px;
+}
+
+.section-title{
+  font-size:25px;
+  margin:30px 0 18px;
+}
+
+.screenshots{
+  display:flex;
+  gap:15px;
+  overflow-x:auto;
+  padding-bottom:10px;
+}
+
+.screenshot{
+  width:190px;
+  height:350px;
+  flex-shrink:0;
+  border-radius:16px;
+  object-fit:cover;
+  background:#222;
+}
+
+.about{
+  color:#ccc;
+  line-height:1.7;
+  font-size:16px;
+}
+
+.info-box{
+  margin-top:25px;
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:12px;
+}
+
+.info{
+  background:#1c1c1c;
+  padding:15px;
+  border-radius:12px;
+}
+
+.info span{
+  display:block;
+  color:#888;
+  font-size:13px;
+  margin-bottom:5px;
+}
+
+.info strong{
+  font-size:15px;
+}
+
+.footer{
+  text-align:center;
   color:#777;
+  padding:40px 0 20px;
 }
 
 @media(max-width:600px){
 
-header{
-  flex-direction:column;
-  align-items:stretch;
-  gap:12px;
-}
-
-.logo{
-  text-align:center;
-}
-
-.search{
-  max-width:none;
-  width:100%;
-}
-
-.banner{
-  padding:25px;
-}
-
-.banner h1{
-  font-size:25px;
-}
-
 .container{
-  padding:20px 15px;
+  padding:15px;
 }
 
-.apps{
-  grid-template-columns:1fr;
+.app-icon{
+  width:90px;
+  height:90px;
+  font-size:40px;
+}
+
+.app-info h1{
+  font-size:23px;
+}
+
+.screenshot{
+  width:170px;
+  height:310px;
 }
 
 }
@@ -202,187 +198,131 @@ header{
 
 <body>
 
-<header>
+<div class="topbar">
 
-<div class="logo">
-📱 My App Store
+<button>‹</button>
+
+<div>
+<button>🔖</button>
+<button>⋮</button>
 </div>
 
-<input
-class="search"
-type="text"
-placeholder="Search for apps..."
-onkeyup="searchApps()"
->
-
-</header>
-
+</div>
 
 <div class="container">
 
-<section class="banner">
+<div class="app-header">
 
-<h1>Discover Apps & Games</h1>
+<div class="app-icon">
+📱
+</div>
 
-<p>
-Find your favorite apps and download them easily.
-</p>
+<div class="app-info">
 
-</section>
+<h1>ViralLeaks</h1>
 
+<div class="developer">
+Your App Studio
+</div>
 
-<div class="categories">
-
-<div class="category">All</div>
-<div class="category">Games</div>
-<div class="category">Tools</div>
-<div class="category">Education</div>
-<div class="category">Entertainment</div>
-<div class="category">Social</div>
+<div class="subtitle">
+In-app purchases
+</div>
 
 </div>
 
-
-<h2>Popular Apps</h2>
-
-
-<div class="apps" id="appList">
-
-
-<div class="app">
-
-<div class="icon">📱</div>
-
-<h3>My First App</h3>
-
-<p>My App Studio</p>
-
-<div class="rating">
-⭐ 4.5 · 10K+ Downloads
 </div>
 
-<a class="download" href="https://github.com/dewarawat56123-byte/My-app-store/raw/refs/heads/main/ViralLeaks%20Protected.apk" download>
+<div class="stats">
+
+<div class="stat">
+<strong>4.5 ⭐</strong>
+<span>24K reviews</span>
+</div>
+
+<div class="stat">
+<strong>18+</strong>
+<span>Rated for 18+</span>
+</div>
+
+<div class="stat">
+<strong>6.1 MB</strong>
+<span>App size</span>
+</div>
+
+</div>
+
+<a
+class="download-btn"
+href="https://github.com/dewarawat56123-byte/My-app-store/raw/refs/heads/main/ViralLeaks%20Protected.apk"
+download
+>
 Download
 </a>
 
-</div>
+<h2 class="section-title">
+Screenshots
+</h2>
 
+<div class="screenshots">
 
+<img
+class="screenshot"
+src="https://placehold.co/400x700/222222/ffffff?text=Screenshot+1"
+>
 
-<div class="app">
+<img
+class="screenshot"
+src="https://placehold.co/400x700/222222/ffffff?text=Screenshot+2"
+>
 
-<div class="icon">🎮</div>
-
-<h3>My Game</h3>
-
-<p>My Game Studio</p>
-
-<div class="rating">
-⭐ 4.3 · 5K+ Downloads
-</div>
-
-<button class="download" onclick="downloadApp()">
-Download
-</button>
-
-</div>
-
-
-
-<div class="app">
-
-<div class="icon">🛠️</div>
-
-<h3>My Tools</h3>
-
-<p>My App Studio</p>
-
-<div class="rating">
-⭐ 4.7 · 2K+ Downloads
-</div>
-
-<button class="download" onclick="downloadApp()">
-Download
-</button>
+<img
+class="screenshot"
+src="https://placehold.co/400x700/222222/ffffff?text=Screenshot+3"
+>
 
 </div>
 
+<h2 class="section-title">
+About this app
+</h2>
 
+<p class="about">
 
-<div class="app">
+ViralLeaks is a mobile application created by Your App Studio.
+Explore the app and enjoy a simple and easy-to-use experience.
 
-<div class="icon">🎵</div>
+</p>
 
-<h3>Music App</h3>
+<div class="info-box">
 
-<p>My Music Studio</p>
-
-<div class="rating">
-⭐ 4.2 · 8K+ Downloads
+<div class="info">
+<span>Version</span>
+<strong>1.0.0</strong>
 </div>
 
-<button class="download" onclick="downloadApp()">
-Download
-</button>
-
+<div class="info">
+<span>Updated</span>
+<strong>July 2026</strong>
 </div>
 
+<div class="info">
+<span>Downloads</span>
+<strong>1M+ Downloads</strong>
+</div>
 
+<div class="info">
+<span>Content Rating</span>
+<strong>18+</strong>
 </div>
 
 </div>
 
+<div class="footer">
+© 2026 Your App Studio
+</div>
 
-<footer>
-
-© 2026 My App Store · All Rights Reserved
-
-</footer>
-
-
-<script>
-
-function searchApps(){
-
-let input =
-document.querySelector(".search")
-.value
-.toLowerCase();
-
-let apps =
-document.querySelectorAll(".app");
-
-apps.forEach(function(app){
-
-let name =
-app.querySelector("h3")
-.innerText
-.toLowerCase();
-
-if(name.includes(input)){
-
-app.style.display="block";
-
-}else{
-
-app.style.display="none";
-
-}
-
-});
-
-}
-
-
-function downloadApp(){
-
-alert(
-"Download link abhi add nahi kiya gaya hai."
-);
-
-}
-
-</script>
+</div>
 
 </body>
 </html>
